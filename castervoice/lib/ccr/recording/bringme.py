@@ -217,9 +217,9 @@ class BringRule(BaseSelfModifyingRule):
             "caster words": "%USERPROFILE%\\.caster\\transformers\\words.txt",
             "caster history": "%USERPROFILE%\\.caster\\data\\sm_history.toml",
             "caster clipboard": "%USERPROFILE%\\.caster\\data\\clipboard.json",
-
         }
     }
+
 
 def get_rule():
     details = RuleDetails(ccrtype=CCRType.SELFMOD, rdp_mode_exclusion=True)
