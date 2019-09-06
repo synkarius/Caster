@@ -195,8 +195,8 @@ class BringRule(BaseSelfModifyingRule):
             "my pictures": "%USERPROFILE%\\Pictures",
             "my documents": "%USERPROFILE%\\Documents",
             "caster user": "%USERPROFILE%\\.caster",
-            "caster transformers": "%USERPROFILE%\\.caster\\transformers",
-            "caster rules": "%USERPROFILE%\\.caster\\rules",
+            "caster transformers folder": "%USERPROFILE%\\.caster\\transformers",
+            "caster rules folder": "%USERPROFILE%\\.caster\\rules",
             "caster data": "%USERPROFILE%\\.caster\\data",
             "sick you lee": "%USERPROFILE%\\.caster\\sikuli",
         },
@@ -204,16 +204,22 @@ class BringRule(BaseSelfModifyingRule):
             "notepad": "C:\\Windows\\notepad.exe",
         },
         "file": {
+            "caster hooks": "%USERPROFILE%\\.caster\\data\\hooks.toml",
+            "caster transformers": "%USERPROFILE%\\.caster\\data\\transformers.toml",
+            "caster companion": "%USERPROFILE%\\.caster\\data\\companion_config.toml",
+            "caster rules": "%USERPROFILE%\\.caster\\data\\rules.toml",
             "caster settings": "%USERPROFILE%\\.caster\\data\\settings.toml",
-            "caster alias": "%USERPROFILE%\\.caster\\data\\sm_aliases.toml",
             "caster bring me": "%USERPROFILE%\\.caster\\data\\sm_bringme.toml",
-            "caster ccr": "%USERPROFILE%\\.caster\\data\\ccr.toml",
-            "caster config debug": "%USERPROFILE%\\.caster\\data\\configdebug.txt",
-            "caster words": "%USERPROFILE%\\.caster\\filter\\words.txt",
-            "caster log": "%USERPROFILE%\\.caster\\data\\log.txt",
+            "caster log": "%USERPROFILE%\\.caster\\log.txt",
+            "caster aliases": "%USERPROFILE%\\.caster\\data\\sm_aliases.toml",
+            "caster chain aliases": "%USERPROFILE%\\.caster\\data\\sm_chain_aliases.toml",
+            "caster debug config": "%USERPROFILE%\\.caster\\data\\configdebug.txt",
+            "caster words": "%USERPROFILE%\\.caster\\transformers\\words.txt",
+            "caster history": "%USERPROFILE%\\.caster\\data\\sm_history.toml",
+            "caster clipboard": "%USERPROFILE%\\.caster\\data\\clipboard.json",
+
         }
     }
-
 
 def get_rule():
     details = RuleDetails(ccrtype=CCRType.SELFMOD, rdp_mode_exclusion=True)
