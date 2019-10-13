@@ -1,5 +1,6 @@
 from dragonfly import Grammar, AppContext
 from castervoice.lib.ctrl.mgr.rule_maker.base_rule_maker import BaseRuleMaker
+from castervoice.lib.merge.mergerule import MergeRule
 
 
 class MappingRuleMaker(BaseRuleMaker):
@@ -20,6 +21,8 @@ class MappingRuleMaker(BaseRuleMaker):
             rule_instance = self._transformers_runner.transform_rule(rule_instance)
 
         self._smr_configurer.configure(rule_instance)
+        if isinstance(rule_instance, MergeRule):
+            rule_instance = rule_instance.to_mapping_rule()
 
         context = None
         if details.executable is not None or details.title is not None:
