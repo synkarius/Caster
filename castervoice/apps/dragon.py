@@ -1,5 +1,6 @@
 from dragonfly import Function, Playback, Mimic, WaitWindow, Repeat, Pause
 from castervoice.lib.actions import Key
+from castervoice.lib.const import CCRType
 from castervoice.lib.context import AppContext
 
 from castervoice.apps.dragon_support import cap_dictation, fix_dragon_double, extras_for_whole_file, \
@@ -100,4 +101,4 @@ class DragonRule(MergeRule):
 
 
 def get_rule():
-    return DragonRule, RuleDetails(name="dragon")
+    return DragonRule, RuleDetails(ccrtype=CCRType.GLOBAL)

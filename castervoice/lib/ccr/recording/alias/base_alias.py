@@ -2,6 +2,7 @@ from dragonfly import Function
 
 from castervoice.lib import settings, context
 from castervoice.lib.actions import Text
+from castervoice.lib.const import CCRType
 from castervoice.lib.merge.selfmod.selfmodrule import BaseSelfModifyingRule
 from castervoice.asynch.hmc import h_launch
 from castervoice.lib.merge.state.actions import AsynchronousAction
