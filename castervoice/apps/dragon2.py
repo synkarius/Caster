@@ -6,7 +6,7 @@ from castervoice.apps.dragon_support import extras_for_whole_file, defaults_for_
 from castervoice.lib.ctrl.mgr.rule_details import RuleDetails
 from castervoice.lib.merge.mergerule import MappingRule
 from castervoice.lib.merge.state.short import R
-from castervoice.lib.const import CCRType
+
 
 class SpellingWindowRule(MappingRule):
     mapping = {

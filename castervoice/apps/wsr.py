@@ -5,6 +5,7 @@ from castervoice.lib.ctrl.mgr.rule_details import RuleDetails
 from castervoice.lib.merge.mergerule import MappingRule
 from castervoice.lib.merge.state.short import R
 
+
 class WindowsSpeechRecognitionRule(MappingRule):
     mapping = {
         "reboot windows speech recognition":
@@ -15,4 +16,4 @@ class WindowsSpeechRecognitionRule(MappingRule):
 
 
 def get_rule():
-    return WindowsSpeechRecognitionRule, RuleDetails(name = "w s r")
+    return WindowsSpeechRecognitionRule, RuleDetails(name="w s r")
