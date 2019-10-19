@@ -4,7 +4,6 @@ from castervoice.lib import utilities
 from castervoice.lib.ctrl.mgr.rule_details import RuleDetails
 from castervoice.lib.merge.mergerule import MappingRule
 from castervoice.lib.merge.state.short import R
-from castervoice.lib.const import CCRType
 
 class WindowsSpeechRecognitionRule(MappingRule):
     mapping = {

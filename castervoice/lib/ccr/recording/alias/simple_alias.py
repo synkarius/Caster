@@ -1,7 +1,6 @@
 from castervoice.lib import settings
 from castervoice.lib.ccr.recording.alias.base_alias import BaseAliasRule
 from castervoice.lib.ctrl.mgr.rule_details import RuleDetails
-from castervoice.lib.const import CCRType
 
 class Alias(BaseAliasRule):
     pronunciation = "alias"
@@ -14,6 +13,6 @@ class Alias(BaseAliasRule):
 
 
 def get_rule():
-    details = RuleDetails(name = "alias", 
+    details = RuleDetails(name="alias", 
                           transformer_exclusion=True)
     return [Alias, details]
