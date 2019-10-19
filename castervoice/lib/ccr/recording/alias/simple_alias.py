@@ -13,6 +13,6 @@ class Alias(BaseAliasRule):
 
 
 def get_rule():
-    details = RuleDetails(name="alias", 
+    details = RuleDetails(name="alias",
                           transformer_exclusion=True)
     return [Alias, details]
