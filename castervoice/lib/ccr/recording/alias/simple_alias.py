@@ -14,6 +14,6 @@ class Alias(BaseAliasRule):
 
 
 def get_rule():
-    details = RuleDetails(ccrtype=CCRType.SELFMOD, 
+    details = RuleDetails(name = "alias", 
                           transformer_exclusion=True)
     return [Alias, details]

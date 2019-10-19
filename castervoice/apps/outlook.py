@@ -4,7 +4,7 @@ from castervoice.lib.actions import Key, Text
 from castervoice.lib.const import CCRType
 from castervoice.lib.ctrl.mgr.rule_details import RuleDetails
 from castervoice.lib.merge.additions import IntegerRefST
-from castervoice.lib.merge.mergerule import MergeRule
+from castervoice.lib.merge.mergerule import MappingRule
 from castervoice.lib.merge.state.short import R
 
 
@@ -13,8 +13,7 @@ def capitalize(text):
     Text(output).execute()
 
 
-class OutlookRule(MergeRule):
-    pronunciation = "outlook"
+class OutlookRule(MappingRule):
     mapping = {
         # create new thing
         "new (appointment | event)": R(Key("sc-a")),
@@ -132,4 +131,4 @@ class OutlookRule(MergeRule):
 
 
 def get_rule():
-    return OutlookRule, RuleDetails(ccrtype=CCRType.APP, executable="outlook")
+    return OutlookRule, RuleDetails(name="outlook", executable="outlook")
